@@ -22,6 +22,8 @@ jobs:
     steps:
     - name: Checkout current repo  
       uses: actions/checkout@v3
+      with:
+        submodules: recursive
 
     - name: install dependencies
       run: |
