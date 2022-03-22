@@ -36,6 +36,7 @@ jobs:
           cd build
           cmake -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCMAKE_INSTALL_PREFIX:PATH=.. ..
           cmake --build . -j "$(nproc)"
+          strip telegram-bot-api
 
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v3
